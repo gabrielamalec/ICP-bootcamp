@@ -1,13 +1,24 @@
 <template>
   <main>
     <img src="/logo2.svg" alt="DFINITY logo" />
+    Siema!
     <br />
-    <br />
-    <form action="#">
-      <label for="name">Enter your name: &nbsp;</label>
-      <input id="name" alt="Name" type="text" />
-      <button type="submit">Click Me!</button>
-    </form>
-    <section id="greeting">siema</section>
+    <button @click="podbij">podbij</button>
+      {{ licznik }}
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      licznik: 0
+    }
+  },
+  methods: {
+    podbij() {
+      this.licznik++
+    }
+  }
+}
+</script>
